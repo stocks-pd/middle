@@ -56,12 +56,6 @@ fun Route.contractRouting() {
     route("/favors_delete") {
         get("{symbol}"){
             val symbol = call.parameters["symbol"] ?: return@get
-            val Stock1_Difference = Difference(2, 1, true, "DAY")
-            val Stock1_Price = Price(123.2, Stock1_Difference, Stock1_Difference)
-            val Stock1 = Stock(symbol, "APPLE", "URL", "stock", Stock1_Price)
-            print(Stock1)
-            call.respond(Stock1)
-
             val status = if (symbol == "APPL") {
                 "OK"
             } else {
@@ -70,6 +64,7 @@ fun Route.contractRouting() {
             call.respond(status)
         }
     }
+
 }
 fun Application.registercontractRoutes()
 {
