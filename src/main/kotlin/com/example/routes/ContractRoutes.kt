@@ -6,6 +6,7 @@ import io.ktor.response.*
 import io.ktor.routing.*
 
 fun Route.contractRouting() {
+Contract-Routings
     route("/favors") {
         get("{symbol}") {
             val symbol = call.parameters["symbol"] ?: return@get
@@ -70,6 +71,8 @@ fun Route.contractRouting() {
             call.respond(status)
         }
     }
+
+ main
 }
 fun Application.registercontractRoutes()
 {
