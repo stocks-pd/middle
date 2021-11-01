@@ -65,7 +65,7 @@ fun Route.contractRouting() {
         }
     }
 }
-
+val r = 1
 fun Application.registercontractRoutes()
 {
     routing {
