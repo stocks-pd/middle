@@ -9,8 +9,7 @@ fun Route.contractRouting() {
     route("/favors") {
         get("{symbol}") {
             val symbol = call.parameters["symbol"] ?: return@get
-            var status : String = ""
-            status = if (symbol == "TSLA") {
+            val status = if (symbol == "TSLA") {
                 "OK"
             } else {
                 "NOT OK"
@@ -49,7 +48,7 @@ fun Route.contractRouting() {
             val symbol = call.parameters["symbol"] ?: return@get
             val Stock1_Difference = Difference(2, 1, true, "DAY")
             val Stock1_Price = Price(123.2, Stock1_Difference, Stock1_Difference)
-            val Stock1 = Stock("$symbol", "APPLE", "URL", "stock", Stock1_Price)
+            val Stock1 = Stock(symbol, "APPLE", "URL", "stock", Stock1_Price)
             print(Stock1)
             call.respond(Stock1)
         }
@@ -59,13 +58,12 @@ fun Route.contractRouting() {
             val symbol = call.parameters["symbol"] ?: return@get
             val Stock1_Difference = Difference(2, 1, true, "DAY")
             val Stock1_Price = Price(123.2, Stock1_Difference, Stock1_Difference)
-            val Stock1 = Stock("$symbol", "APPLE", "URL", "stock", Stock1_Price)
+            val Stock1 = Stock(symbol, "APPLE", "URL", "stock", Stock1_Price)
             print(Stock1)
             call.respond(Stock1)
         }
     }
 }
-val r = 1
 fun Application.registercontractRoutes()
 {
     routing {
