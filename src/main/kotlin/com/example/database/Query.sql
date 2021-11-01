@@ -1,0 +1,5 @@
+CREATE TABLE Favorites
+(
+    id INT NOT NULL PRIMARY KEY,
+    Symbol VARCHAR(70) NOT NULL
+);
