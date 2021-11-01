@@ -31,7 +31,7 @@ fun Route.contractRouting() {
         }
     }
     route("/stocks") {
-        post{
+       post{
             val Param = call.receive<Filters>()
             print(Param)
             val Filters_Sort = mapOf("Filters" to Param)
