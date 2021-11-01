@@ -1,34 +1,11 @@
 package com.example.routes
 
-import com.example.Customer
-import com.example.customerStorage
 import io.ktor.application.*
 import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
 
-
-
 fun Route.contractRouting() {
-    route("/customer") {
-        get {
-            call.respond(customerStorage)
-        }
-        get("{id}") {
-            val id = call.parameters["id"]
-            val customer = customerStorage.find { it.id == id } ?: return@get
-            call.respond(customer)
-            
-        }
-        post {
-            customerStorage += call.receive<Customer>()
-            call.respond(mapOf("customers" to customerStorage))
-        }
-        delete("{id}") {
-            val id = call.parameters["id"]
-            customerStorage.removeIf {it.id == id}
-        }
-    }
     route("/favors") {
         get("{symbol}") {
             val symbol = call.parameters["symbol"] ?: return@get
