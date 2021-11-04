@@ -5,6 +5,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 
 data class FiltersX(
-    val price: Int,
+    val price: Double,
     val symbol: String
 )

@@ -10,7 +10,7 @@ import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.StdOutSqlLogger
 import org.jetbrains.exposed.sql.addLogger
 import org.jetbrains.exposed.sql.transactions.transaction
-
+import com.example.API.search_stock
 
 fun Route.contractRouting() {
 
@@ -40,15 +40,20 @@ fun Route.contractRouting() {
     }
     route("/favors") {
         post{
+            //------------------------------
             val Param = call.receive<Filters>()
             print(Param)
             val Filters_Sort = mapOf("Filters" to Param)
             print(Filters_Sort)
-            val Stock1_Difference = Difference(2, 1, true, "DAY")
-            val Stock1_Price = Price(123.2, Stock1_Difference, Stock1_Difference)
-            val Stock1 = Stock("AAPL", "APPLE", "URL", "stock", Stock1_Price)
-            print(Stock1)
-            call.respond(Stock1)
+            //------------------------------
+            val search = search_stock("TSLA")
+           // val Stock1_Difference = Difference(2, 1, true, "DAY")
+            //val Stock1_Price = Price(123.2, Stock1_Difference, Stock1_Difference)
+            //val Stock1 = Stock("AAPL", "APPLE", "URL", "stock", Stock1_Price)
+            //print(Stock1)
+            //call.respond(Stock1)
+            //print(search)
+            call.respond(search)
         }
     }
     route("/stocks") {
@@ -67,11 +72,13 @@ fun Route.contractRouting() {
     route("/search") {
         get("{symbol}"){
             val symbol = call.parameters["symbol"] ?: return@get
+            val search = search_stock("$symbol")
             val Stock1_Difference = Difference(2, 1, true, "DAY")
             val Stock1_Price = Price(123.2, Stock1_Difference, Stock1_Difference)
             val Stock1 = Stock(symbol, "APPLE", "URL", "stock", Stock1_Price)
             print(Stock1)
-            call.respond(Stock1)
+            call.respond(search)
+            //call.respond(Stock1)
         }
     }
     route("/favors_delete") {
