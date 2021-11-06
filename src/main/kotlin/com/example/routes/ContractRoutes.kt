@@ -17,7 +17,7 @@ fun Route.contractRouting() {
 
 
     route("/favors") {
-        get("{symbol}") {
+        put("{symbol}") {
             Database.connect(
                 url = "jdbc:postgresql://localhost:5432/stonks",
                 driver = "org.postgresql.Driver",
@@ -25,7 +25,7 @@ fun Route.contractRouting() {
                 password = "123"
             )
             var res: Boolean? = false
-            val symbol = call.parameters["symbol"] ?: return@get
+            val symbol = call.parameters["symbol"] ?: return@put
             transaction {
                 addLogger(StdOutSqlLogger)
                 res = add_favorites("$symbol")
@@ -81,8 +81,8 @@ fun Route.contractRouting() {
             //call.respond(Stock1)
         }
     }
-    route("/favors_delete") {
-        get("{symbol}"){
+    route("/favors") {
+        delete("{symbol}"){
             Database.connect(
                 url = "jdbc:postgresql://localhost:5432/stonks",
                 driver = "org.postgresql.Driver",
@@ -90,7 +90,7 @@ fun Route.contractRouting() {
                 password = "123"
             )
             var res: Boolean? = false
-            val symbol = call.parameters["symbol"] ?: return@get
+            val symbol = call.parameters["symbol"] ?: return@delete
             transaction {
                 addLogger(StdOutSqlLogger)
                 res = delete_favorites("$symbol")
