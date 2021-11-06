@@ -1,4 +1,4 @@
-package com.example.routes
+package com.example.routes.FiltersClass
 
 import kotlinx.serialization.Serializable
 
