@@ -8,29 +8,27 @@ import com.example.routes.StockClass.Difference
 import com.example.routes.StockClass.Price
 import com.example.routes.StockClass.Stock
 
-class Request(private val url: String)
-{
-    fun run()
-    {
+class Request(private val url: String) {
+    fun run() {
         val forecastJson = URL(url).readText()
     }
 }
 
-fun search_stock(_symbol:String): String {
+fun search_stock(_symbol: String): String {
     val symbol = _symbol
-    var url = "https://financialmodelingprep.com/api/v3/quote/$symbol?apikey=9821c9be1c0c2f131a182998a4c5ff68" //symbol value changesPercentage change
+    var url =
+        "https://financialmodelingprep.com/api/v3/quote/$symbol?apikey=9821c9be1c0c2f131a182998a4c5ff68" //symbol value changesPercentage change
     val JsonIN1 = URL(url).readText()
     url = "https://financialmodelingprep.com/api/v3/stock/list?apikey=9821c9be1c0c2f131a182998a4c5ff68" //type
     //val JsonIN3 = URL(url).readText()
-    url = "https://financialmodelingprep.com/api/v3/profile/$symbol?apikey=9821c9be1c0c2f131a182998a4c5ff68" //currensy company imageUrl
+    url =
+        "https://financialmodelingprep.com/api/v3/profile/$symbol?apikey=9821c9be1c0c2f131a182998a4c5ff68" //currensy company imageUrl
     val JsonIN2 = URL(url).readText()
     val gson = Gson()
 
-    if(JsonIN1 == "" || JsonIN2 == "")
-    {
+    if (JsonIN1 == "" || JsonIN2 == "") {
         return "NOT FOUND"
-    }
-    else {
+    } else {
         //==========================================================================================
         val Stock1_Difference = Difference(2.0, 1.0, true, "DAY")
         val Stock1_Price = Price(123.2, "USD", Stock1_Difference)
@@ -61,8 +59,7 @@ fun search_stock(_symbol:String): String {
 
 }
 
-fun main()
-{
+fun main() {
     val url = "https://financialmodelingprep.com/api/v3/quote/RUBUSD?apikey=9821c9be1c0c2f131a182998a4c5ff68"
 
     val forecastJson = URL(url).readText()

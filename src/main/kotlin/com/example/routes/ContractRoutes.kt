@@ -19,7 +19,6 @@ import org.jetbrains.exposed.sql.transactions.transaction
 fun Route.contractRouting() {
 
 
-
     route("/favors") {
         put("{symbol}") {
             Database.connect(
@@ -35,37 +34,32 @@ fun Route.contractRouting() {
                 res = add_favorites("$symbol")
             }
             val status = if (res == true) {
-                "OK"
+                "SUCCESSFULLY"
             } else {
-                "NOT OK"
+                "ERROR"
             }
             call.respond(status)
         }
     }
     route("/favors") {
-        post{
+        post {
             //------------------------------
-            val Param = call.receive<Filters>()
-            print(Param)
-            val Filters_Sort = mapOf("Filters" to Param)
-            print(Filters_Sort)
+            val param = call.receive<Filters>()
+            print(param)
             //------------------------------
             val search = search_stock("TSLA")
-           // val Stock1_Difference = Difference(2, 1, true, "DAY")
+            // val Stock1_Difference = Difference(2, 1, true, "DAY")
             //val Stock1_Price = Price(123.2, Stock1_Difference, Stock1_Difference)
             //val Stock1 = Stock("AAPL", "APPLE", "URL", "stock", Stock1_Price)
             //print(Stock1)
             //call.respond(Stock1)
             //print(search)
-            call.respond(search)
+            call.respond(param)
         }
     }
     route("/stocks") {
-        post{
-            val Param = call.receive<Filters>()
-            print(Param)
-            val Filters_Sort = mapOf("Filters" to Param)
-            print(Filters_Sort)
+        post {
+            val param = call.receive<Filters>()
             val Stock1_Difference = Difference(2.0, 1.0, true, "DAY")
             val Stock1_Price = Price(123.2, "USD", Stock1_Difference)
             val Stock1 = Stock("AAPL", "APPLE", "URL", "stock", Stock1_Price)
@@ -74,17 +68,16 @@ fun Route.contractRouting() {
         }
     }
     route("/search") {
-        get("{symbol}"){
+        get("{symbol}") {
             val symbol = call.parameters["symbol"] ?: return@get
             val search = search_stock("$symbol")
             print(search)
-
             call.respond(search)
             //call.respond(Stock1)
         }
     }
     route("/favors") {
-        delete("{symbol}"){
+        delete("{symbol}") {
             Database.connect(
                 url = "jdbc:postgresql://localhost:5432/stonks",
                 driver = "org.postgresql.Driver",
@@ -98,17 +91,17 @@ fun Route.contractRouting() {
                 res = delete_favorites("$symbol")
             }
             val status = if (res == true) {
-                "OK"
+                "SUCCESSFULLY"
             } else {
-                "NOT OK"
+                "ERROR"
             }
             call.respond(status)
         }
     }
 
 }
-fun Application.registercontractRoutes()
-{
+
+fun Application.registercontractRoutes() {
     routing {
         contractRouting()
     }
