@@ -41,7 +41,7 @@ fun search_stock(_symbol:String): String {
         Stock1.symbol = ObjectJsonIN1.symbol
         Stock1_Price.value = ObjectJsonIN1.price
         Stock1_Difference.changesPercentage = ObjectJsonIN1.changesPercentage
-        Stock1_Difference.changesPercentage = ObjectJsonIN1.change
+        Stock1_Difference.change = ObjectJsonIN1.change
         //==========================================================================================
         val ArrayJson2 = gson.fromJson(JsonIN2, ForecastJson2::class.java)
         val ObjectJsonIN2 = ArrayJson2[0]
