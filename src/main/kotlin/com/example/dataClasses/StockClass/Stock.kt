@@ -1,6 +1,5 @@
-package com.example.routes.StockClass
+package com.example.dataClasses.StockClass
 
-import com.example.routes.StockClass.Price
 import kotlinx.serialization.Serializable
 
 @Serializable

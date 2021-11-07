@@ -1,5 +1,7 @@
-package com.example.routes.ForecastJson2Class
+package com.example.dataClasses.ForecastJson2Class
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class ForecastJson2Item(
     val address: String,
     val beta: Double,

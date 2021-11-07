@@ -1,8 +1,7 @@
 package com.example.database
 
-import org.jetbrains.exposed.sql.Database
-import org.jetbrains.exposed.sql.*
-import org.jetbrains.exposed.sql.transactions.transaction
+import org.jetbrains.exposed.sql.Table
+import org.jetbrains.exposed.sql.insert
 
 object Favorites : Table() {
     val id = integer("id").autoIncrement() // Column<String>
@@ -17,7 +16,3 @@ fun add_favorites(name_stock: String): Boolean {
     return true
 }
 
-fun delete_favorites(name_stock: String): Boolean {
-    Favorites.deleteWhere { Favorites.symbol like "$name_stock" }
-    return true
-}

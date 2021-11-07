@@ -1,5 +1,7 @@
-package com.example.routes.ForecastJson1Class
+package com.example.dataClasses.ForecastJson1Class
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class forecastJson1Item(
     val avgVolume: Int,
     val change: Double,

@@ -1,21 +1,14 @@
 package com.example.API
 
-import java.net.URL
+import com.example.dataClasses.ForecastJson1Class.forecastJson1
+import com.example.dataClasses.ForecastJson2Class.ForecastJson2
+import com.example.dataClasses.StockClass.Difference
+import com.example.dataClasses.StockClass.Price
+import com.example.dataClasses.StockClass.Stock
 import com.google.gson.Gson
-import com.example.routes.ForecastJson1Class.*
-import com.example.routes.ForecastJson2Class.*
-import com.example.routes.StockClass.Difference
-import com.example.routes.StockClass.Price
-import com.example.routes.StockClass.Stock
+import java.net.URL
 
-class Request(private val url: String) {
-    fun run() {
-        val forecastJson = URL(url).readText()
-    }
-}
-
-fun search_stock(_symbol: String): String {
-    val symbol = _symbol
+fun search_stock(symbol: String): String {
     var url =
         "https://financialmodelingprep.com/api/v3/quote/$symbol?apikey=9821c9be1c0c2f131a182998a4c5ff68" //symbol value changesPercentage change
     val JsonIN1 = URL(url).readText()
@@ -58,12 +51,3 @@ fun search_stock(_symbol: String): String {
     }
 
 }
-
-fun main() {
-    val url = "https://financialmodelingprep.com/api/v3/quote/RUBUSD?apikey=9821c9be1c0c2f131a182998a4c5ff68"
-
-    val forecastJson = URL(url).readText()
-    print(forecastJson)
-
-}
-

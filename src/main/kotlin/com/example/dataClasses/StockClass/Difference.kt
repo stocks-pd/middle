@@ -1,4 +1,4 @@
-package com.example.routes.StockClass
+package com.example.dataClasses.StockClass
 
 import kotlinx.serialization.Serializable
 
