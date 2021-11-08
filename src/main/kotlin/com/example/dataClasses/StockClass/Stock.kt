@@ -8,6 +8,6 @@ data class Stock(
     var symbol: String,
     var company: String,
     var image: String,
-    val type: String,
+    var type: String,
     val price: Price,
 )

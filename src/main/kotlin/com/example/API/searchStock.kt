@@ -10,15 +10,14 @@ import java.net.URL
 
 fun search_stock(symbol: String): String {
     var url =
-        "https://financialmodelingprep.com/api/v3/quote/$symbol?apikey=9821c9be1c0c2f131a182998a4c5ff68" //symbol value changesPercentage change
+        "https://financialmodelingprep.com/api/v3/quote/$symbol?apikey=$apikey" //symbol value changesPercentage change
     val JsonIN1 = URL(url).readText()
-    url = "https://financialmodelingprep.com/api/v3/stock/list?apikey=9821c9be1c0c2f131a182998a4c5ff68" //type
+    url = "https://financialmodelingprep.com/api/v3/stock/list?apikey=$apikey" //type
     //val JsonIN3 = URL(url).readText()
     url =
-        "https://financialmodelingprep.com/api/v3/profile/$symbol?apikey=9821c9be1c0c2f131a182998a4c5ff68" //currensy company imageUrl
+        "https://financialmodelingprep.com/api/v3/profile/$symbol?apikey=$apikey" //currensy company imageUrl
     val JsonIN2 = URL(url).readText()
     val gson = Gson()
-
     if (JsonIN1 == "" || JsonIN2 == "") {
         return "NOT FOUND"
     } else {
@@ -46,7 +45,6 @@ fun search_stock(symbol: String): String {
         }
         //==========================================================================================
         var jsonString = gson.toJson(Stock1)
-        print(jsonString)
         return jsonString
     }
 
