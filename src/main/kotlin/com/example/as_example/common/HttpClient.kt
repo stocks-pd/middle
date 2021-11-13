@@ -6,7 +6,7 @@ import io.ktor.client.features.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.logging.*
-
+// это клиент который должен использоваться для всех запросов к api
 val applicationHttpClient = HttpClient(Apache) {
     engine {
         followRedirects = true
