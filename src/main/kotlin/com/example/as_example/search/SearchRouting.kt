@@ -12,7 +12,9 @@ fun Route.searchRouting() {
     route("/search") {
 
         get("/{symbol}") {
-            try {
+            try { // все роутинги нужно оборачивать в try/catch тк может быть эксепшн,
+                  // если не оборачивать то сервак упадет
+
                 val ticker = call.parameters["symbol"] ?: return@get call.badRequest()
 
                 val response = SearchUseCase().execute(ticker)
