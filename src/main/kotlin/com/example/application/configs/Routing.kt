@@ -1,4 +1,4 @@
-package com.example.plugins
+package com.example.application.configs
 
 import com.example.routes.FavorsRouting
 import com.example.routes.SearchRouting
