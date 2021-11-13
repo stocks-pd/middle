@@ -1,6 +1,6 @@
 package com.example
 
-
+import com.example.database.DataBaseConnection
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import com.example.plugins.*
@@ -24,7 +24,7 @@ fun main() {
         configureTemplating()
         configureHTTP()
         configureSecurity()
-
+        DataBaseConnection()
     }.start(wait = true)
 
 }

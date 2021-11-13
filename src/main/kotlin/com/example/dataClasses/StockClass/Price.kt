@@ -1,11 +1,11 @@
-package com.example.routes
+package com.example.dataClasses.StockClass
 
 import kotlinx.serialization.Serializable
 
 @Serializable
 
 data class Price(
-    val value: Double,
-    val currency: Difference,
+    var value: Double,
+    var currency: String,
     val differences: Difference
 )

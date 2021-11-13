@@ -32,6 +32,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     implementation ("org.postgresql:postgresql:42.1.4")
     implementation("io.ktor:ktor-websockets:$ktor_version")
+    implementation ("com.google.code.gson:gson:2.8.5")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines")
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
