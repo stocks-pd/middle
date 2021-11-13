@@ -1,4 +1,4 @@
-package com.example.as_example.search.data_source.models
+package com.example.as_example.search.models
 
 import kotlinx.serialization.Serializable
 

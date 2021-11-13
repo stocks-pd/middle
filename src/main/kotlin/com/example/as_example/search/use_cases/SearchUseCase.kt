@@ -1,7 +1,7 @@
 package com.example.as_example.search.use_cases
 
 import com.example.as_example.common.financialmodelingprep.FinancialModelingPrepRepository
-import com.example.as_example.search.data_source.models.Stock
+import com.example.as_example.search.models.Stock
 
 class SearchUseCase {
 
