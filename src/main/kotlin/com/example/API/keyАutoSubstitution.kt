@@ -14,7 +14,7 @@ fun setApiKey(): String {
     var trig = 0
     var i = -1
     val error = "Error Message"
-    while (trig !=1) {
+    while (trig != 1) {
         try {
             i++
             val url = "https://financialmodelingprep.com/api/v3/quote/RUBUSD?apikey=$apikey"
@@ -35,6 +35,6 @@ fun setApiKey(): String {
 
         }
     }
-    print("Active: $apikey" )
+    print("Active: $apikey")
     return apikey
 }

@@ -5,7 +5,6 @@ import com.example.as_example.common.applicationHttpClient
 import com.example.as_example.common.financialmodelingprep.models.QuoteResponse
 import com.example.as_example.common.financialmodelingprep.models.SearchResponse
 import io.ktor.client.request.*
-
  /*
     в этом объекте нужно будет писать все запросы к FMP. если добавится еще какое-то api,
     значит нужно будет создать еще один репозиторий.
