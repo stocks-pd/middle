@@ -1,8 +1,6 @@
-package com.example.plugins
+package com.example.application.configs
 
-import com.example.routes.FavorsRouting
-import com.example.routes.SearchRouting
-import com.example.routes.StocksRouting
+import com.example.as_example.search.searchRouting
 
 import io.ktor.application.*
 import io.ktor.response.*
@@ -16,8 +14,9 @@ fun Application.configureRouting() {
         }
     }
     routing {
-        FavorsRouting()
-        SearchRouting()
-        StocksRouting()
+//        FavorsRouting()
+//        StocksRouting()
+
+        searchRouting()
     }
 }

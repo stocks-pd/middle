@@ -11,7 +11,7 @@ fun postFavors(): ResultRow {
     var res : ResultRow =
     transaction {
         addLogger(StdOutSqlLogger)
-        res = postFavorites()
+        postFavorites()
     }
     return res
 }
