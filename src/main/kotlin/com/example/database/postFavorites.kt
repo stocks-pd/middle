@@ -5,7 +5,7 @@ import org.jetbrains.exposed.sql.deleteWhere
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.selectAll
 
-fun postFavorites(): ResultRow {
-    val FavorsResultRow = Favorites.select {Favorites.symbol eq symbol}.single()
+fun postFavorites(): Query {
+    val FavorsResultRow = Favorites.select { Favorites.symbol eq "AAPL"}
     return FavorsResultRow
 }

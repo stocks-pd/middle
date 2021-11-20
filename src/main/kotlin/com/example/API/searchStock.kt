@@ -7,8 +7,10 @@ import com.example.dataClasses.StockClass.Price
 import com.example.dataClasses.StockClass.Stock
 import com.google.gson.Gson
 import java.net.URL
+import com.example.main
 
 fun search_stock(symbol: String): String {
+    var apikey = setApiKey()
     var url =
         "https://financialmodelingprep.com/api/v3/quote/$symbol?apikey=$apikey" //symbol value changesPercentage change
     val JsonIN1 = URL(url).readText()

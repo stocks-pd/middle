@@ -1,14 +1,12 @@
 package com.example.API
 
-import com.example.dataClasses.StockClass.Difference
-import com.example.dataClasses.StockClass.Price
 import com.example.dataClasses.StockClass.Stock
 import com.example.dataClasses.listStocks.ListStocks
 import com.google.gson.Gson
 import java.net.URL
 
-const val apikey = "e3b78e56511d7dfdbd8000775c51664c"
 fun postStocks(): String {
+    var apikey = setApiKey()
     var url = "https://financialmodelingprep.com/api/v3/stock/list?apikey=$apikey" //type
     val JsonIN3 = URL(url).readText()
     val gson = Gson()

@@ -1,5 +1,7 @@
 package com.example
 
+import com.example.API.keyAutoselection
+import com.example.API.setApiKey
 import com.example.database.DataBaseConnection
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
@@ -25,6 +27,7 @@ fun main() {
         configureHTTP()
         configureSecurity()
         DataBaseConnection()
+        keyAutoselection()
     }.start(wait = true)
 
 }
