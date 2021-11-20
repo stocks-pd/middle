@@ -1,5 +1,6 @@
 package com.example.application
 
+import com.example.API.keyAutoselection
 import com.example.application.configs.configureRouting
 import com.example.application.configs.configureSerialization
 import com.example.application.configs.configureDataBase
@@ -14,6 +15,7 @@ fun main() {
         configureSerialization()
         configureHTTP()
         configureDataBase()
+        keyAutoselection()
     }.start(wait = true)
 }
 
