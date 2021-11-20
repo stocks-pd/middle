@@ -1,5 +1,5 @@
-package com.example.API
-
+//package com.example.API
+//
 //import com.example.dataClasses.StockClass.Difference
 //import com.example.dataClasses.StockClass.Price
 //import com.example.dataClasses.StockClass.Stock
@@ -26,7 +26,7 @@ package com.example.API
 //        var stockArray: ArrayList<Stock> = ArrayList()
 //        var arrayStocksName100: ArrayList<String> = ArrayList()
 //        for (i in 0..10) {
-//            arrayStocksName100.add(arrayOfSymbols[i])
+//           arrayStocksName100.add(arrayOfSymbols[i])
 //        }
 //        //==========================================================================================
 //        for (value in arrayStocksName100) {

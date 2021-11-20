@@ -1,8 +1,9 @@
 package com.example.as_example.common
 
+import com.example.API.setApiKey
 object NetworkConstants {
     const val FMP_HOST = "financialmodelingprep.com/api/v3"
-    const val API_KEY_VALUE = "e3b78e56511d7dfdbd8000775c51664c"
+    var API_KEY_VALUE = setApiKey()
 
     object Parameters {
         const val QUERY = "query"

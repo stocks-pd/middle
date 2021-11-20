@@ -35,10 +35,6 @@ fun setApiKey(): String {
 
         }
     }
+    print("Active: $apikey" )
     return apikey
-}
-fun Application.keyAutoselection()
-{
-    val ActiveKey = setApiKey()
-    print("Active: $ActiveKey" )
 }

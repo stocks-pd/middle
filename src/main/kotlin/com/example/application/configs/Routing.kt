@@ -15,8 +15,7 @@ fun Application.configureRouting() {
     }
     routing {
 //        FavorsRouting()
-//        StocksRouting()
-
+//       StocksRouting()
         searchRouting()
     }
 }
