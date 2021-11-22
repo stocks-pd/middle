@@ -1,8 +1,8 @@
-package com.example.as_example.search
+package com.example.search
 
-import com.example.as_example.common.utils.Status
-import com.example.as_example.common.utils.badRequest
-import com.example.as_example.search.use_cases.SearchUseCase
+import com.example.common.utils.Status
+import com.example.common.utils.badRequest
+import com.example.search.use_cases.SearchUseCase
 import io.ktor.application.*
 import io.ktor.response.*
 import io.ktor.routing.*

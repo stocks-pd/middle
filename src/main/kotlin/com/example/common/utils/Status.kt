@@ -1,4 +1,4 @@
-package com.example.as_example.common.utils
+package com.example.common.utils
 
 import kotlinx.serialization.Serializable
 

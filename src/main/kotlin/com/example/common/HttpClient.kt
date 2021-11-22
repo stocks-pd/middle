@@ -1,4 +1,4 @@
-package com.example.as_example.common
+package com.example.common
 
 import io.ktor.client.*
 import io.ktor.client.engine.apache.*

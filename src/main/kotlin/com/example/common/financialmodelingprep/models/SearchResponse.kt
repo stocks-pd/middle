@@ -1,4 +1,4 @@
-package com.example.as_example.common.financialmodelingprep.models
+package com.example.common.financialmodelingprep.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

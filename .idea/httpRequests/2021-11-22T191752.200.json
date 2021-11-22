@@ -1,0 +1,18 @@
+[
+  {
+    "symbol": "TSLA",
+    "company": "Tesla, Inc.",
+    "image": "https://financialmodelingprep.com/image-stock/TSLA.png",
+    "type": "stock",
+    "price": {
+      "value": 1162.33,
+      "currency": "USD",
+      "differences": {
+        "changesPercentage": 4.5952806,
+        "change": -25.269999999999982,
+        "isGrows": true,
+        "period": "DAY"
+      }
+    }
+  }
+]

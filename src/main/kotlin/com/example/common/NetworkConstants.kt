@@ -1,4 +1,4 @@
-package com.example.as_example.common
+package com.example.common
 
 import com.example.API.setApiKey
 object NetworkConstants {
