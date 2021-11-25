@@ -28,7 +28,7 @@ object FinancialModelingPrepRepository {
                 }
             }
     }
-
+     
     fun image(ticker: String) = "https://financialmodelingprep.com/image-stock/$ticker.png"
 
     suspend fun price(ticker: String): QuoteResponse? {

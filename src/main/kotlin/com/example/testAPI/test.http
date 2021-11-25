@@ -1,1 +1,2 @@
-PUT 127.0.0.1:8080/favors/TSLA
+POST 127.0.0.1:8080/favors
+

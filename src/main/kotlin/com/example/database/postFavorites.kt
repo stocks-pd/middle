@@ -1,11 +1,15 @@
 package com.example.database
 
-import com.example.database.Favorites.symbol
-import org.jetbrains.exposed.sql.deleteWhere
-import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.StdOutSqlLogger
+import org.jetbrains.exposed.sql.addLogger
 import org.jetbrains.exposed.sql.selectAll
+import org.jetbrains.exposed.sql.transactions.transaction
 
-fun postFavorites(): ResultRow {
-    val FavorsResultRow = Favorites.select {Favorites.symbol eq symbol}.single()
-    return FavorsResultRow
+fun postFavorites(): List<Favor> {
+
+    val fav = transaction {
+        addLogger(StdOutSqlLogger)
+        Favorites.selectAll().map { Favorites.toFavors(it) }
+    }
+    return fav
 }

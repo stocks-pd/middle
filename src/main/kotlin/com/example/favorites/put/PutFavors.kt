@@ -1,6 +1,5 @@
 package com.example.favorites.put
 
-import com.example.API.postFavors
 import com.example.database.add_favorites
 import com.example.database.delete_favorites
 import io.ktor.application.*
@@ -12,7 +11,6 @@ import org.jetbrains.exposed.sql.transactions.transaction
 
 
 fun Route.putFavorsRouting() {
-
     route("/favors") {
         put("{symbol}") {
             var res: Boolean? = false
