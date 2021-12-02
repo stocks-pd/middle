@@ -2,6 +2,7 @@ package com.example.application.configs
 
 
 
+import com.example.detail.detailRouting
 import com.example.favorites.delete.deleteFavorsRouting
 import com.example.favorites.post.postFavorsRouting
 import com.example.favorites.put.putFavorsRouting
@@ -22,5 +23,6 @@ fun Application.configureRouting() {
         putFavorsRouting()
         postFavorsRouting()
         deleteFavorsRouting()
+        detailRouting()
     }
 }

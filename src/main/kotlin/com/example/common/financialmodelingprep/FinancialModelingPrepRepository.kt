@@ -4,6 +4,8 @@ import com.example.common.NetworkConstants
 import com.example.common.applicationHttpClient
 import com.example.common.financialmodelingprep.models.QuoteResponse
 import com.example.common.financialmodelingprep.models.SearchResponse
+import com.example.common.financialmodelingprep.models.DetailStockResponce
+import com.example.detail.models.DetailStock
 import io.ktor.client.request.*
  /*
     в этом объекте нужно будет писать все запросы к FMP. если добавится еще какое-то api,
@@ -42,4 +44,17 @@ object FinancialModelingPrepRepository {
             }
             .firstOrNull()
     }
+
+     suspend fun detail(ticker: String): List<DetailStockResponce> {
+         return applicationHttpClient.get {
+             url {
+                 host = NetworkConstants.FMP_HOST
+                 path("/profile/$ticker")
+                 parameter(NetworkConstants.Parameters.API_KEY, NetworkConstants.API_KEY_VALUE)
+
+             }
+         }
+     }
+
+
 }

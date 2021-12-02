@@ -1,0 +1,18 @@
+[
+  {
+    "symbol": "AAPL",
+    "company": "Apple Inc.",
+    "image": "https://financialmodelingprep.com/image-stock/AAPL.png",
+    "type": "stock",
+    "price": {
+      "value": 159.565,
+      "currency": "USD",
+      "differences": {
+        "changesPercentage": -3.167843,
+        "change": 2.375,
+        "isGrows": false,
+        "period": "DAY"
+      }
+    }
+  }
+]

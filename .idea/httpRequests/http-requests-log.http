@@ -1,3 +1,55 @@
+GET http://127.0.0.1:8080/detail/TSLA
+
+<> 2021-12-02T171706.200.json
+
+###
+
+GET http://127.0.0.1:8080/detail/AAPL
+
+<> 2021-12-02T171640.200.json
+
+###
+
+GET http://127.0.0.1:8080/detail/AAPL
+
+<> 2021-12-02T164739.200.json
+
+###
+
+GET http://127.0.0.1:8080/detail/AAPL
+
+###
+
+GET http://127.0.0.1:8080/detail/AAPL
+
+<> 2021-11-27T113936.200.json
+
+###
+
+GET http://127.0.0.1:8080/detail/TSLA
+
+###
+
+GET http://127.0.0.1:8080/detail/TSLA
+
+###
+
+GET http://127.0.0.1:8080/detail/TSLA
+
+###
+
+GET http://127.0.0.1:8080/detail/TSLA
+
+###
+
+GET http://127.0.0.1:8080/detail
+
+###
+
+GET http://127.0.0.1:8080/detail
+
+###
+
 POST http://127.0.0.1:8080/favors
 
 <> 2021-11-25T190109.200.json
