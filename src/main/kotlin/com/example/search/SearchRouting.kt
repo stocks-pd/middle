@@ -16,7 +16,6 @@ fun Route.searchRouting() {
                   // если не оборачивать то сервак упадет
 
                 val ticker = call.parameters["symbol"] ?: return@get call.badRequest()
-
                 val response = SearchUseCase().execute(ticker)
                 call.respond(response)
 

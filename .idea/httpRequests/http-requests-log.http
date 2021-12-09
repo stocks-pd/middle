@@ -1,3 +1,79 @@
+GET http://127.0.0.1:8080/stocks_model_model/predict/AAPL
+
+###
+
+GET http://127.0.0.1:8080/stocks_model_model/predict/AAPL
+
+###
+
+GET http://127.0.0.1:8080/stocks_model_model/predict/AAPL
+
+###
+
+GET http://127.0.0.1:8080/stocks_model/predict/AAPL
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/ticker=AAPL&Data=data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/ticker=AAPL&Data=data
+
+<> 2021-12-04T134615.200.txt
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+<> 2021-12-04T134451.200.txt
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://127.0.0.1:8080/stonks_model/predict/AAPL&Data
+
+###
+
+GET http://stonks_model/predict/AAPL&Data
+
+###
+
 GET http://127.0.0.1:8080/detail/TSLA
 
 <> 2021-12-02T171706.200.json
@@ -165,62 +241,6 @@ POST http://127.0.0.1:8080/favors
 ###
 
 POST http://127.0.0.1:8080/favors
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-###
-
-DELETE http://127.0.0.1:8080/favors/SIRI
-
-<> 2021-11-22T194349.200.txt
-
-###
-
-PUT http://127.0.0.1:8080/favors/TSLA
-
-<> 2021-11-22T193808.200.txt
-
-###
-
-PUT http://127.0.0.1:8080/favors/TSLA
-
-###
-
-GET http://127.0.0.1:8080/search/AAPL
-
-<> 2021-11-22T191814.200.json
-
-###
-
-GET http://127.0.0.1:8080/search/TSLA
-
-<> 2021-11-22T191752.200.json
-
-###
-
-GET http://127.0.0.1:8080/search/TSLA
-
-<> 2021-11-22T190836.200.json
-
-###
-
-GET http://127.0.0.1:8080/search/TSLA
-
-###
-
-GET http://127.0.0.1:8080/search/ya
-
-###
-
-GET http://127.0.0.1:8080/search/ya
-
-<> 2021-11-20T174847.200.json
 
 ###
 
