@@ -3,6 +3,7 @@ package com.example.common
 import com.example.API.setApiKey
 object NetworkConstants {
     const val FMP_HOST = "financialmodelingprep.com/api/v3"
+    const val DS_HOST = "localhost:8000"
     var API_KEY_VALUE = setApiKey()
 
     object Parameters {

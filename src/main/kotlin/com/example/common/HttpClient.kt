@@ -15,11 +15,6 @@ val applicationHttpClient = HttpClient(Apache) {
         connectionRequestTimeout = 20_000
     }
 
-    defaultRequest {
-        url {
-            host = NetworkConstants.FMP_HOST
-        }
-    }
 
     install(Logging) {
         logger = Logger.DEFAULT

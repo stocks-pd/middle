@@ -1,7 +1,18 @@
 package com.example.common.StonksApi
 
+import com.example.common.NetworkConstants
 import com.example.common.StonksApi.models.PredictResponse
+import com.example.common.applicationHttpClient
 import com.example.predict.models.*
+import io.ktor.client.features.*
+import io.ktor.client.features.get
+import io.ktor.client.request.*
+import io.ktor.util.*
+import io.ktor.util.url
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
+import java.net.URL
+import kotlin.text.get
 
 object StockApiRepository {
 
@@ -9,18 +20,16 @@ object StockApiRepository {
     private const val DEFAULT_EXCHANGE = "NASDAQ"
 
     suspend fun predict(ticker: String, period: String): List<PredictResponse> {
-        return listOf(
-            PredictResponse(123.0, "sfsdf", 123.5, 4342.0, 324.5),
-            PredictResponse(124.0, "dfg", 126.5, 4362.0, 3324.5)
-        )
 //        return applicationHttpClient.get {
 //            url {
-//                host = NetworkConstants.FMP_HOST
-//                path("/profile/$ticker")
-//                parameter(NetworkConstants.Parameters.API_KEY, NetworkConstants.API_KEY_VALUE)
+//                host = NetworkConstants.DS_HOST
+//                path("/predict?ticker=$ticker&periods=$period")
 //            }
 //        }
+        var result = URL("http://127.0.0.1:8000/predict?ticker=TSLA&periods=MONTH").readText()
+        val obj = Json.decodeFromString<List<PredictResponse>>(result)
+        return obj
+
+        }
     }
 
-
-}

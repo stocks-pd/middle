@@ -1,3 +1,93 @@
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T235011.200.json
+
+###
+
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T234326.200.json
+
+###
+
+GET http://localhost:8000/predict/TSLA/WEEK
+
+<> 2021-12-10T234254.404.html
+
+###
+
+GET http://localhost:8000/predict?ticker=TSLA&periods=WEEK
+
+<> 2021-12-10T234211.200.html
+
+###
+
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T232552.200.json
+
+###
+
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T232529.200.json
+
+###
+
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T232308.200.json
+
+###
+
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T232230.200.json
+
+###
+
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T232144.200.json
+
+###
+
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T232107.200.json
+
+###
+
+GET http://localhost:8080/predict/TSLA/WEEK
+
+<> 2021-12-10T231915.200.json
+
+###
+
+GET http://localhost:8080/predict/AAPL/WEEK
+
+<> 2021-12-10T231849.200.json
+
+###
+
+GET http://localhost:8080/predict/AAPL/WEEK
+
+<> 2021-12-10T231555.200.json
+
+###
+
+GET http://localhost:8080/predict/AAPl/WEEK
+
+<> 2021-12-10T231517.200.json
+
+###
+
+GET http://localhost:8000/predict?ticker=TSLA&periods=WEEK
+
+<> 2021-12-10T231426.200.html
+
+###
+
 GET http://127.0.0.1:8080/stocks_model_model/predict/AAPL
 
 ###
@@ -159,88 +249,6 @@ POST http://127.0.0.1:8080/favors
 POST http://127.0.0.1:8080/favors
 
 <> 2021-11-25T183445.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T182840.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T182824.200.json
-
-###
-
-PUT http://127.0.0.1:8080/favors/GOOG
-
-<> 2021-11-25T182730.200.txt
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T181938.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T174327.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T174237.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T174035.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T173956.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T173715.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-<> 2021-11-25T173620.200.txt
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-###
-
-GET http://127.0.0.1:8080/favors
-
-###
-
-GET http://127.0.0.1:8080/search/TSLA
-
-<> 2021-11-25T173441.200.json
-
-###
-
-POST http://127.0.0.1:8080/favors
-
-###
-
-POST http://127.0.0.1:8080/favors
 
 ###
 
